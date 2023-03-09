@@ -1,0 +1,114 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  font-size: 2rem;
+}
+
+#main-doc {
+  display: flex;
+  width: 100%;
+}
+
+#navbar {
+  border-right: 2px solid #4e4e4e;
+  width: 100%;
+  max-width: 16.5vw;
+  position: fixed;
+  left: 0;
+  height: 100%;
+}
+
+#navbar header {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+#navbar header,
+#navbar a {
+  border-bottom: 1px solid #4e4e4e;
+  overflow: hidden;
+}
+
+#navbar a {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.section-wrapper {
+  padding: 1.75rem 3rem;
+  width: 100%;
+  margin-left: 16.5vw;
+}
+
+p, a {
+  color: #d7d7d7;
+}
+
+.block-of-code {
+  background-color: #2a2a40;
+  padding: 0.5rem;
+}
+
+.nextline {
+  padding-top: 0.3rem;
+  display: block;
+}
+
+.main-section {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  #main-doc {
+    flex-direction: column;
+    align-items: center;
+  }
+  #navbar {
+    min-width: 100vw;
+    position: static;
+  }
+  .section-wrapper {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #navbar header,
+  #navbar a{
+    font-size: 0.9rem;
+  }
+  #navbar {
+    min-width: 20vw;
+  }
+}
+
+@media (min-width: 1080px) {
+  #navbar header {
+    font-size: 1.75rem;
+  }
+  #navbar a {
+    font-size: 1rem;
+  }
+  #navbar {
+    min-width: 16.5vw;
+  }
+}
